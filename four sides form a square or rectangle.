@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the first side:");
+        int a = sc.nextInt();
+
+        System.out.println("Enter the second side:");
+        int b = sc.nextInt();
+
+        System.out.println("Enter the third side:");
+        int c = sc.nextInt();
+
+        System.out.println("Enter the fourth side:");
+        int d = sc.nextInt();
+
+        if (isSquare(a, b, c, d)) {
+            System.out.println("The sides form a square.");
+        } else if (isRectangle(a, b, c, d)) {
+            System.out.println("The sides form a rectangle.");
+        } else {
+            System.out.println("The sides do NOT form a square or rectangle.");
+        }
+
+    }
+
+    public static boolean isSquare(int a, int b, int c, int d) {
+       
+        return (a == b) && (b == c) && (c == d);
+    }
+
+    public static boolean isRectangle(int a, int b, int c, int d) {
+
+        return (a == c && b == d) && !isSquare(a, b, c, d);
+    }
+}
