@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main { 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int lowest;
+        if(a<=b&&a<=c)
+        {
+            lowest=a;
+        }else if(b<=a&&b<=c){
+            lowest=b;
+        }else{
+            lowest=c;
+        }
+        
+        System.out.println("The lowest number is: " + lowest);
+
+}
+}
