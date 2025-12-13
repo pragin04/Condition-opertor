@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the first side:");
+        double a = sc.nextDouble();
+
+        System.out.println("Enter the second side:");
+        double b = sc.nextDouble();
+
+        System.out.println("Enter the third side:");
+        double c = sc.nextDouble();
+
+        if (isValidTriangle(a, b, c)) {
+            System.out.println("The sides form a valid triangle.");
+        } else {
+            System.out.println("The sides do NOT form a valid triangle.");
+        }
+
+       
+    }
+
+    public static boolean isValidTriangle(double a, double b, double c) {
+        return (a + b > c) && (a + c > b) && (b + c > a);
+    }
+}
