@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a year:");
+        int year = sc.nextInt();
+
+        if (isCenturyYear(year)) {
+            System.out.println(year + " is a century year.");
+        } else {
+            System.out.println(year + " is NOT a century year.");
+        }
+
+        sc.close();
+    }
+
+    public static boolean isCenturyYear(int year) {
+       
+        return year % 100 == 0;
+    }
+}
